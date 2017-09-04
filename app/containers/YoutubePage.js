@@ -13,9 +13,14 @@ class YoutubePage extends Component {
     videoId: string
   }
 
-
   componentDidMount() {
     this.setupPlayer();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.videoId !== prevProps.videoId) {
+      this.changeVideoId(this.props.videoId);
+    }
   }
 
   async setupPlayer() {
@@ -26,6 +31,14 @@ class YoutubePage extends Component {
     }
 
     this.player = await this.createPlayer(this.props.videoId);
+  }
+
+  async changeVideoId(videoId) {
+    await youtubeAPI();
+
+    if (this.player) {
+      this.player.loadVideoById(videoId);
+    }
   }
 
   createPlayer = (videoId) => {
