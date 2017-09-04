@@ -1,6 +1,8 @@
-const initialState = 'STOPPED';
+const initialState = 'NO_VIDEO';
 
 const playback = (state = initialState, action) => {
+  // if (state === 'NO_VIDEO') return state;
+
   switch (action.type) {
     case 'PLAY_VIDEO':
       return 'PLAYING';

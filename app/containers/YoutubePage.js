@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PlaybackButtons from '../components/PlaybackButtons';
+import YoutubeIframe from './YoutubeIframe';
 import { playVideo, pauseVideo, stopVideo } from '../actions/playback';
-
 
 class YoutubePage extends Component {
 
@@ -21,6 +21,7 @@ class YoutubePage extends Component {
     return (
       <div>
         <h1>Youtube page</h1>
+        <YoutubeIframe />
         <PlaybackButtons onClick={this.handlePlaybackButtonsClick} playback={this.props.playback} />
       </div>
     );

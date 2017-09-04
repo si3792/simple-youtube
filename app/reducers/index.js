@@ -7,7 +7,7 @@ import playback from './playback';
 const rootReducer = combineReducers({
   counter,
   router,
-  playback
+  playback,
 });
 
 export default rootReducer;
