@@ -21,7 +21,7 @@ class YoutubePage extends Component {
     return (
       <div>
         <h1>Youtube page</h1>
-        <YoutubeIframe />
+        <YoutubeIframe videoId={'M7lc1UVf-VE'} />
         <PlaybackButtons onClick={this.handlePlaybackButtonsClick} playback={this.props.playback} />
       </div>
     );
