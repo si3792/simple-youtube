@@ -20,17 +20,14 @@ $button-shadow: #27496d;
     color: #fff;
     background-color: $button-back-light;
     border: none;
-    box-shadow: 0 10px $button-shadow;
+    box-shadow: 0 12px $button-shadow;
     outline: 0;
+    transition: all 0.1s;
 
     &:hover {
         background-color: $button-back-dark;
-    }
-
-    &:active {
-        background-color: $button-back-dark;;
-        box-shadow: 0 5px $button-shadow;
-        transform: translateY(5px);
+        box-shadow: 0 10px $button-shadow;
+        transform: translateY(2px);
     }
 
     &:first-child {
@@ -41,7 +38,11 @@ $button-shadow: #27496d;
         border-radius: 0 20px 20px 0;
     }
 
-
+    &.active {
+        background-color: $button-back-dark;;
+        box-shadow: 0 2px $button-shadow;
+        transform: translateY(10px);
+    }
 }
 
 
